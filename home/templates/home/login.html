@@ -50,6 +50,9 @@
                                 <div class="d-flex mb-5 align-items-center">
                                     <span class="ml-auto"><a style='color:#D97300; text-decoration:none;' href="#" class="forgot-pass">Forgot Password</a></span>
                                 </div>
+                                {% if error %}
+                                    <p>{{ error }}</p>
+                                {% endif %}
 
                                 <input style='background-color:#D97300; border-color: #D97300' type="submit" value="Log In" class="btn btn-block btn-primary">
                             </form>
