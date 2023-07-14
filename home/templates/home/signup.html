@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href={% static 'home/fonts/icomoon/style.css' %}>
+
+    <link rel="stylesheet" href={% static 'home/css/owl.carousel.min.css' %}>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href={% static 'home/css/bootstrap.min.css' %}>
+
+    <!-- Style -->
+    <link rel="stylesheet" href={% static 'home/css/style.css' %}>
+
+
+    <title>Sign Up</title>
+</head>
+<body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img id="login-image" src={% static 'home/image/login.png' %} alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3>Sign Up</h3>
+                            </div>
+                            <!-- Form Start -->
+                            <form method="post" action="/signup/">
+                                {% csrf_token %}
+                                <div class="form-group d-flex align-items-center">
+                                    <label style="margin-right: 12px; width: 120px; text-align: left;" for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" required>
+                                </div>
+                                <div class="form-group d-flex align-items-center">
+                                    <label style="margin-right: 12px; width: 120px; text-align: left;"  for="fname">First Name</label>
+                                    <input type="text" class="form-control" id="fname" name="fname" required>
+                                </div>
+                                <div class="form-group d-flex align-items-center">
+                                    <label style="margin-right: 12px; width: 120px; text-align: left;"  for="lname">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" name="lname" required>
+                                </div>
+                                <div class="form-group d-flex align-items-center">
+                                    <label style="margin-right: 12px; width: 120px; text-align: left;"  for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group d-flex align-items-center">
+                                    <label style="margin-right: 12px; width: 120px; text-align: left;"  for="pass1">Password</label>
+                                    <input type="password" class="form-control" id="pass1" name="pass1" required>
+                                </div>
+                                <div class="form-group d-flex align-items-center">
+                                    <label style="margin-right: 12px; width: 120px; text-align: left;"  for="pass2">Confirm Password</label>
+                                    <input type="password" class="form-control" id="pass2" name="pass2" required>
+                                </div>
+
+                                <button style='background-color:#D97300; border-color: #D97300' type="submit" class="btn btn-block btn-primary mt-2  ">Sign Up</button>
+
+                                <a style="text-decoration: none;" href="/signin/">
+                                    <button type="button" style='background-color:#D97300; border-color: #D97300' class="btn btn-block btn-primary mt-2  ">Sign In</button>
+                                </a>
+                            </form>
+                            <!-- Form End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+<script src={% static 'home/js/jquery-3.3.1.min.js'%}></script>
+<script src={% static 'home/js/popper.min.js'%}></script>
+<script src={% static 'home/js/bootstrap.min.js'%}></script>
+<script src={% static 'home/js/main.js'%}></script>
+
+</html>

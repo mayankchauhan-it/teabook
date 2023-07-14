@@ -1,0 +1,87 @@
+@media screen and (min-width: 1025px) and (max-width: 1240px) {
+  .container {
+    max-width: 96% !important;
+  }
+  .cntct-form {
+    left: 495px;
+  }
+  h3.card-text.pt-3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .container {
+    max-width: 96% !important;
+  }
+  .cntct-form {
+    left: 485px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 96% !important;
+  }
+  .deatail {
+    margin-top: 80px;
+  }
+  .cntct-form {
+    width: 41%;
+    padding: 40px 40px 68px;
+    position: absolute;
+    z-index: 99999;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 767px) {
+  .container {
+    max-width: 96% !important;
+  }
+  .deatail {
+    margin-top: 80px;
+  }
+  .cntct-form {
+    width: 45%;
+    padding: 40px 40px 68px;
+    position: absolute;
+    z-index: 99999;
+    right: 30px;
+    top: 0px;
+  }
+  .bioimg {
+    background-size: contain;
+    padding-top: 205px;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 766px) {
+  .container {
+    max-width: 96% !important;
+  }
+  .cntct-form {
+    /* width: 50%; */
+    background-image: url(images/Rectangle\ 42.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 40px 68px;
+    /* position: absolute; */
+    z-index: 99999;
+    right: 120px;
+    top: -75px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 574px) {
+  .container {
+    max-width: 96% !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .container {
+    max-width: 96% !important;
+  }
+}

@@ -1,0 +1,25 @@
+.slide1 img {
+  width: 120px;
+  height: 55px;
+  animation: scroll 60s linear infinite;
+}
+
+.slide1-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}
+
+/* services */
+
+/* testimoniol */

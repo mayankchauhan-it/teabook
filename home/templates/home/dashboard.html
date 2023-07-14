@@ -18,9 +18,9 @@
                             <h1>Welcome to Dashboard</h1>
                         </div>
                         <div class="col-2">
-                            <form action="{% url 'logout' %}" method="post" id="logout-form">
+                            <form action="{% url 'logout' %}" method="post" autocomplete="off" id="logout-form">
                                 {% csrf_token %}
-                                <button class="btn btn-primary btn-boxed h-100 w-100">Log-out</button>
+                                <button type="submit" style='background-color:#D97300; border-color: #D97300' class="btn btn-block btn-primary mt-2 ">Log Out</button>
                             </form>
                         </div>
                     </div>
