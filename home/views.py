@@ -29,7 +29,8 @@ def home(request):
             # Authentication failed, handle the error
             return render(request, 'home/login.html', {'error': 'Invalid credentials'})
 
-    return render(request, 'home/login.html')
+    # return render(request, 'home/login.html')
+    return render(request, 'pages/index.html')
 
 
 
